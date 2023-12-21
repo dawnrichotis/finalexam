@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thay đổi hình ảnh theo vòng lặp</title>
+  </head>
+  <body>
+    <img id="myImage" src="./img/home.jpg" width="300" height="200" />
+
+    <script>
+      // Danh sách các hình ảnh
+      var imageList = ["./img/home.jpg", "./img/home2.png"];
+
+      // Lấy thẻ hình ảnh theo ID
+      var imgElement = document.getElementById("myImage");
+
+      // Biến đếm để theo dõi hình ảnh hiện tại
+      var count = 0;
+
+      // Hàm thay đổi hình ảnh
+      function changeImage() {
+        // Kiểm tra xem count có vượt quá số lượng hình ảnh không
+        if (count === imageList.length) {
+          count = 0; // Nếu có, đặt lại count về 0
+        }
+
+        // Thay đổi src của thẻ hình ảnh
+        imgElement.src = imageList[count];
+
+        // Tăng giá trị của count để chuyển đến hình ảnh tiếp theo trong danh sách
+        count++;
+      }
+
+      // Sử dụng hàm setInterval để gọi hàm thay đổi hình ảnh sau mỗi khoảng thời gian nhất định (ví dụ: 3000ms)
+      setInterval(changeImage, 300);
+    </script>
+  </body>
+</html>

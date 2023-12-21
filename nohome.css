@@ -1,0 +1,30 @@
+nav {
+  text-align: center;
+  color: aliceblue;
+  background-color: rgb(200, 243, 243);
+  font-family: 標楷體;
+  font-size: 40px;
+  border: solid gray 1px;
+  border-radius: 5px;
+}
+.mid {
+  display: block;
+  margin: auto;
+}
+.left {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+#logo {
+  position: fixed;
+}
+#cuoitrang {
+  font-size: 40px;
+}
+#video {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 80%;
+}
